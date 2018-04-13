@@ -16,12 +16,12 @@ export default {
         {
           title: '磨磨风景区',
           time: '2018/4/23',
-          src: '../assets/image/timg.jpeg'
+          src: require('../assets/image/timg.jpeg')
         },
         {
           title: 'fgoo',
           time: '2015/2/5',
-          src: '../assets/image/fgo-1.jpg'
+          src: require('../assets/image/fgo-1.jpg')
         }
       ]
     }

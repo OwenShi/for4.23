@@ -4,6 +4,7 @@ import MainView from '../views/mainView'
 import InView from '../views/inView'
 import OutView from '../views/outView'
 import Hello from '../views/hello'
+import Draw from '../views/draw'
 
 Vue.use(Router)
 
@@ -28,6 +29,11 @@ export default new Router({
           path: 'in',
           name: 'In',
           component: InView
+        },
+        {
+          path: 'draw',
+          name: 'draw',
+          component: Draw
         }
       ]
     }

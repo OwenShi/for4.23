@@ -1,10 +1,15 @@
 <template>
   <div class="layout">
     <div class="header">
-      <mu-tabs :value="mainTab" @change="handleMainTabChange">
+      <!-- <mu-tabs :value="mainTab" @change="handleMainTabChange">
         <mu-tab value="out" icon="flight_takeoff"/>
         <mu-tab value="in" icon="home"/>
-      </mu-tabs>
+      </mu-tabs> -->
+      <mu-bottom-nav :value="mainTab" shift @change="handleMainTabChange">
+        <mu-bottom-nav-item value="out" title="Out" icon="flight_takeoff"></mu-bottom-nav-item>
+        <mu-bottom-nav-item value="in" title="In" icon="home"></mu-bottom-nav-item>
+        <!-- <mu-bottom-nav-item value="draw" title="到此一游" icon="home"></mu-bottom-nav-item> -->
+      </mu-bottom-nav>
     </div>
     <div class="content">
       <transition :name='transitionName'>
