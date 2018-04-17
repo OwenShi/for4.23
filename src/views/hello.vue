@@ -34,7 +34,8 @@ export default {
       console.log(ev.changedTouches[0].pageY)
     },
     start () {
-      this.$router.push('/main/out')
+      console.log('hhh')
+      this.$router.push('/main/1')
     }
   }
 }

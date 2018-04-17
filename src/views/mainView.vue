@@ -5,11 +5,12 @@
         <mu-tab value="out" icon="flight_takeoff"/>
         <mu-tab value="in" icon="home"/>
       </mu-tabs> -->
-      <mu-bottom-nav :value="mainTab" shift @change="handleMainTabChange">
-        <mu-bottom-nav-item value="out" title="Out" icon="flight_takeoff"></mu-bottom-nav-item>
-        <mu-bottom-nav-item value="in" title="In" icon="home"></mu-bottom-nav-item>
+      <mu-tabs :value="mainTab" shift @change="handleMainTabChange">
+        <mu-tab value="1" title="PAST" ></mu-tab>
+        <mu-tab value="2" title="NOW" ></mu-tab>
+        <mu-tab value="3" title="FEATURE" ></mu-tab>
         <!-- <mu-bottom-nav-item value="draw" title="到此一游" icon="home"></mu-bottom-nav-item> -->
-      </mu-bottom-nav>
+      </mu-tabs>
     </div>
     <div class="content">
       <transition :name='transitionName'>
@@ -46,7 +47,7 @@ export default {
     }
   },
   mounted () {
-    this.$router.replace('/main/out')
+    this.$router.replace('/main/1')
   },
   methods: {
     handleMainTabChange (val) {

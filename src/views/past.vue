@@ -7,7 +7,7 @@
     </div>
     <div v-else>
       <car-detail :imgTitle="currentImg.title" :imgTime="currentImg.time" :imgSrc="currentImg.src" :imgText="currentImg.text"></car-detail>
-      <mu-raised-button class="back-button" backgroundColor="#b3e5fc" label="BACK" @click="back" fullWidth/>
+      <mu-raised-button class="back-button" label="BACK" @click="back" fullWidth/>
     </div>
   </div>
 </template>
@@ -25,22 +25,22 @@ export default {
       showAll: true,
       outList: [
         {
-          title: '磨山风景区',
-          time: '2018/4/23',
-          src: require('../assets/image/timg.jpeg'),
-          text: 'what are you talking about'
+          title: '去年今日',
+          time: '2017/4/23',
+          src: require('../assets/past/IMG_20170423_164153.jpg'),
+          text: '强行偷拍，最为致命。'
         },
         {
-          title: 'fgo',
-          time: '2015/2/5',
-          src: require('../assets/image/fgo-1.jpg'),
-          text: 'hahahahaha'
+          title: '去年今日',
+          time: '2017/4/23',
+          src: require('../assets/past/IMG_20170423_151256.jpg'),
+          text: '大庭 广众 之下 这样多不好意思。'
         },
         {
-          title: '磨山风景区',
-          time: '2018/4/23',
-          src: require('../assets/image/timg.jpeg'),
-          text: 'acsaudhh'
+          title: '去年今日',
+          time: '2017/4/23',
+          src: require('../assets/past/IMG_20170423_161222.jpg'),
+          text: '我记得 这里 有一条 肚子很囧很囧的鱼。'
         }
       ],
       currentImg: {
@@ -58,6 +58,7 @@ export default {
   methods: {
     imgDetail (item) {
       this.showAll = false
+      this.interval = true
       this.currentImg.title = item.title
       this.currentImg.time = item.time
       this.currentImg.src = item.src

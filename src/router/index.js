@@ -1,8 +1,8 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import MainView from '../views/mainView'
-import InView from '../views/inView'
-import OutView from '../views/outView'
+import Now from '../views/now'
+import Past from '../views/past'
 import Hello from '../views/hello'
 import Draw from '../views/draw'
 
@@ -21,18 +21,18 @@ export default new Router({
       component: MainView,
       children: [
         {
-          path: 'out',
-          name: 'Out',
-          component: OutView
+          path: '1',
+          name: 'past',
+          component: Past
         },
         {
-          path: 'in',
-          name: 'In',
-          component: InView
+          path: '2',
+          name: 'now',
+          component: Now
         },
         {
-          path: 'draw',
-          name: 'draw',
+          path: '3',
+          name: 'feature',
           component: Draw
         }
       ]
