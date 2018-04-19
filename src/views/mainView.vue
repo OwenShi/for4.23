@@ -29,13 +29,13 @@
 .route {
   position: absolute;
   width: 100%;
-  transition: all 0.1s ease-out;
+  transition: all 0.2s ease-out;
 }
-.slide-left-enter-active {
-  transform: translate(100%, 0);
-}
-.slide-right-enter-active {
+.slide-left-enter-active, .slide-right-leave-active{
   transform: translate(-100%, 0);
+}
+.slide-right-enter-active, .slide-left-leave-active{
+  transform: translate(100%, 0);
 }
 </style>
 <script>
@@ -57,7 +57,7 @@ export default {
   },
   watch: {
     '$route' (to, from) {
-      if (to.path === '/main/out') {
+      if ((from.path === '/main/1' && to.path === '/main/2') || (from.path === '/main/2' && to.path === '/main/3') || (from.path === '/main/1' && to.path === '/main/3')) {
         this.transitionName = 'slide-right'
       } else {
         this.transitionName = 'slide-left'

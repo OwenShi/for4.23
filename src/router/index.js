@@ -4,7 +4,7 @@ import MainView from '../views/mainView'
 import Now from '../views/now'
 import Past from '../views/past'
 import Hello from '../views/hello'
-import Draw from '../views/draw'
+import Feature from '../views/feature.vue'
 
 Vue.use(Router)
 
@@ -33,7 +33,7 @@ export default new Router({
         {
           path: '3',
           name: 'feature',
-          component: Draw
+          component: Feature
         }
       ]
     }

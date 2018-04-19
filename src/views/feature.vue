@@ -1,13 +1,13 @@
 <template>
   <div class="layout">
     <div v-if="showAll">
-      <div @click="imgDetail(item)" v-for="(item, index) in outList" :key=index>
+      <div @click="imgDetail(item)" v-for="(item, index) in featureList" :key=index>
         <card-image :imgTitle="item.title" :imgTime="item.time" :imgSrc="item.src"></card-image>
       </div>
     </div>
     <div v-else>
       <car-detail :imgTitle="currentImg.title" :imgTime="currentImg.time" :imgSrc="currentImg.src" :imgText="currentImg.text"></car-detail>
-      <mu-raised-button class="back-button" label="BACK" @click="back" fullWidth/>
+      <!-- <mu-raised-button class="back-button" label="BACK" @click="back" fullWidth/> -->
     </div>
   </div>
 </template>
@@ -20,24 +20,12 @@ export default {
   data () {
     return {
       showAll: true,
-      outList: [
+      featureList: [
         {
-          title: '去年今日',
-          time: '2017/4/23',
-          src: require('../assets/past/IMG_20170423_164153.jpg'),
-          text: '强行偷拍，最为致命。'
-        },
-        {
-          title: '去年今日',
-          time: '2017/4/23',
-          src: require('../assets/past/IMG_20170423_151256.jpg'),
-          text: '大庭 广众 之下 这样多不好意思。'
-        },
-        {
-          title: '去年今日',
-          time: '2017/4/23',
-          src: require('../assets/past/IMG_20170423_161222.jpg'),
-          text: '我记得 这里 有一条 肚子很囧很囧的鱼。'
+          title: '来日方长',
+          time: '--/--/--',
+          src: require('../assets/feature/95DADCCAD965F6BF0A9EED11A2919446.jpg'),
+          text: '愿有岁月可回首,且以深情共白头。'
         }
       ],
       currentImg: {
@@ -47,6 +35,10 @@ export default {
         text: ''
       }
     }
+  },
+  mounted () {
+    // 直接加载唯一的一张imgDetail
+    this.imgDetail(this.featureList[0])
   },
   components: {
     cardImage,
@@ -60,10 +52,10 @@ export default {
       this.currentImg.time = item.time
       this.currentImg.src = item.src
       this.currentImg.text = item.text
-    },
-    back () {
-      this.showAll = true
     }
+    // back () {
+    //   this.showAll = true
+    // }
   }
 }
 </script>

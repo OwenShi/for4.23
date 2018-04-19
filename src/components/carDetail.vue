@@ -15,7 +15,10 @@
     </mu-card>
   </div>
 </template>
-<style>
+<style scoped>
+.mu-card {
+  box-shadow: none;
+}
 .text-box {
   text-align: center;
 }
