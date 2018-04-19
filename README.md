@@ -1,11 +1,15 @@
-# showtime
+## 2018.4.23
 
-> A Vue.js project
+> 给我们的纪念日小礼物@yanzd
 
-## Build Setup
+> - MUSE-UI + Vue
+> - 动画及过渡效果使用Vue的 ```tansition``` 组件
+> - 包含简易的自定义组件
+> - 欢迎讨论学习啊
+> - 转载请附上github仓库地址
 
 ``` bash
-# install dependencies
+# 安装依赖
 npm install
 
 # serve with hot reload at localhost:8080
@@ -13,9 +17,6 @@ npm run dev
 
 # build for production with minification
 npm run build
-
-# build for production and view the bundle analyzer report
-npm run build --report
 ```
 
 For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
